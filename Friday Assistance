@@ -1,0 +1,270 @@
+import subprocess
+import webbrowser
+import pyttsx3
+import os
+import datetime
+
+friday = pyttsx3.init()
+user_command_count = 0
+user_name = input("Please enter your name sir/ma'm: ")
+
+def wishMe():   
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+         friday.say("Good Morning!")
+
+    elif hour>=12 and hour<18:
+        friday.say("Good Afternoon!")
+
+    else:
+        friday.say("Good Evening!")
+
+if __name__ == "__main__":
+    wishMe()
+friday.runAndWait()
+
+friday.say(f"hi {user_name} this is friday and please type all alphabets in small alphabets thankyou")
+friday.runAndWait()
+
+while user_command_count < 1000:
+    user_command = input(f"How can I help you {user_name}> ")
+
+# These words will be said by friday
+    if user_command == "hi":
+        friday.say(f"hi {user_name} this is friday how can i help you")
+        friday.runAndWait()
+    if user_command == "what are you doing":
+        friday.say(f"helping you {user_name}")
+        friday.runAndWait()
+    if user_command == "what is my name":
+        friday.say(f"your name is {user_name}")
+        friday.runAndWait()
+    if user_command == "bad":
+        friday.say(f"sorry {user_name} i will improve")
+        friday.runAndWait()
+    if user_command == "good":
+        friday.say(f"thankyou {user_name} for giving good")
+        friday.runAndWait()
+    if user_command == "excelent":
+        friday.say(f"very very very thankyou {user_name} for giving excelent")
+        friday.runAndWait()
+    if user_command == "thankyou for opening":
+        friday.say(f"ok {user_name} your welcome")
+        friday.runAndWait()
+    if user_command == "thankyou":
+        friday.say(f"ok {user_name} your welcome")
+        friday.runAndWait()
+
+# These are url are opened by google
+    if user_command == "open google":
+        friday.say(f"ok {user_name} opening google")
+        webbrowser.open('www.google.com')
+        friday.runAndWait()
+    if user_command == "open youtube":
+        friday.say(f"ok {user_name}opening youtube")
+        webbrowser.open("https://www.youtube.com")
+        friday.runAndWait()
+    if user_command == "open mouse designer":
+        friday.say(f" ok {user_name} opening mouse designer")
+        webbrowser.open("http://www.rw-designer.com/online-cursor-editor.com")
+        friday.runAndWait()
+    if user_command == "open sudeep website":
+        friday.say(f"ok {user_name} opening sudeep's website")
+        webbrowser.open("https://www.sudeepthewebdeveloper.netlify.app")
+        friday.runAndWait()
+    if user_command == "open amazon":
+        friday.say(f"ok {user_name} opening amazon")
+        webbrowser.open("https://www.amazon.in")
+        friday.runAndWait()
+    if user_command == "open practically":
+        friday.say(f"ok {user_name} opening practically")
+        webbrowser.open("https://www.practically.com")
+        friday.runAndWait()
+    if user_command == "open jarvis ai code in github":
+        friday.say(f"ok {user_name} opening jarvis ai code in github")
+        webbrowser.open("https://gist.github.com/vardhan-2009/f7352952f7a987e6fc9aa2d840c6653f")
+        friday.runAndWait()
+    if user_command == "open wifi router settings":
+        friday.say(f"ok {user_name} opening wifi router settings")
+        webbrowser.open("http://192.168.0.1/login.htm")
+        friday.runAndWait()
+    if user_command == "open gmail":
+        friday.say(f"ok {user_name} opening gmail")
+        webbrowser.open("gmail.com")
+        friday.runAndWait()
+    if user_command == "open drive":
+        friday.say(f"ok {user_name} opening drive")
+        webbrowser.open("https://drive.google.com")
+        friday.runAndWait()
+    if user_command == "open white hat junior":
+        friday.say(f"ok {user_name} opening white hat junior")
+        webbrowser.open("https://studio.code.org")
+        friday.runAndWait()
+    if user_command == "open whatsapp":
+        friday.say(f"ok {user_name} opening whatsapp")
+        webbrowser.open("https://web.whatsapp.com")
+        friday.runAndWait()
+    if user_command == "open textbooks":
+        friday.say(f"ok {user_name} opening textbooks")
+        webbrowser.open("https://scert.telangana.gov.in/home.aspx")
+        friday.runAndWait()
+    if user_command == "open printest":
+        friday.say(f"ok {user_name} opening printest")
+        webbrowser.open("https://in.pinterest.com")
+        friday.runAndWait()
+    if user_command == "open mxplayer":
+        friday.say(f"ok {user_name} opening mxplayer")
+        webbrowser.open("https://www.mxplayer.com")
+        friday.runAndWait()
+    if user_command == "open microsoft bing":
+        friday.say(f"ok {user_name} opening microsoft bing")
+        webbrowser.open("bing.com/?FORM=Z9FD1")
+        friday.runAndWait()
+    if user_command == "open icloud":
+        friday.say(f"ok {user_name} opening icloud")
+        webbrowser.open("https://www.icloud.com")
+        friday.runAndWait()
+    if user_command == "open hotstar":
+        friday.say(f"ok {user_name} opening hotstar")
+        webbrowser.open("https://www.hotstar.com")
+        friday.runAndWait()
+    if user_command == "open prime video":
+        friday.say(f"ok {user_name} opening primevideo")
+        webbrowser.open("https://www.primevideo.com")
+        friday.runAndWait()
+    if user_command == "open aha":
+        friday.say(f"ok {user_name} opening aha")
+        webbrowser.open("https://www.aha.video")
+        friday.runAndWait()
+    if user_command == "open facebook":
+        friday.say(f"ok {user_name} opening facebook")
+        webbrowser.open("https://www.facebook.com")
+        friday.runAndWait()
+    if user_command == "open google meet":
+        friday.say(f"ok {user_name} opening google meet")
+        webbrowser.open("https://meet.google.com")
+        friday.runAndWait()
+    if user_command == "open google translate":
+        friday.say(f"ok {user_name} opening google translate")
+        webbrowser.open("https://translate.google.co.in/?hl=en&tab=rT")
+        friday.runAndWait()
+    if user_command == "open google photoes":
+        friday.say(f"ok {user_name} opening google photoes")
+        webbrowser.open("https://photos.google.com/?tab=rq&pageld=none&pli=1")
+        friday.runAndWait()
+    if user_command == "open google docs":
+        friday.say(f"ok {user_name} opening google docs")
+        webbrowser.open("https://docs.google.com/document/u/0")
+        friday.runAndWait()
+    if user_command == "open google calender":
+        friday.say(f"ok {user_name} opening google calender")
+        webbrowser.open("https://calendar.google.com/calendar/u/0/r?pli=1")
+        friday.runAndWait()
+    if user_command == "open google sign in":
+        friday.say(f"ok {user_name} opening google sign in")
+        webbrowser.open("https://accounts.google.com")
+        friday.runAndWait()
+    if user_command == "open google apps":
+        friday.say(f"ok {user_name} opening google apps")
+        webbrowser.open("https://about.google/intl/en/products/?tab=rh")
+        friday.runAndWait()
+    if user_command == "open google app":
+        friday.say(f"ok {user_name} opening google apps")
+        webbrowser.open("https://chrome://apps")
+        friday.runAndWait()
+    if user_command == "open microsoft":
+        friday.say(f"ok {user_name} opening microsoft")
+        webbrowser.open("https://www.microsoft.com")
+        friday.runAndWait()
+    if user_command == "open google and search latest movies in telugu":
+        friday.say(f"ok {user_name} searching latest movies in telugu")
+        webbrowser.open("https://www.google.com/search?q=latest+movies+in+telugu&rlz=1C1SQJL_enCA786CA795&ei=z9u4YMXnM7TD3LUPzIumuAk&oq=latest+movies+in+telugu&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyAggAMgIIADIECAAQQzICCAAyAggAMgIIADICCAAyAggAMgIIADoHCAAQRxCwAzoHCAAQsAMQQzoNCC4QsAMQyAMQQxCTAjoKCC4QsAMQyAMQQ0oFCDgSATFQgRBY3BJgyhVoAXACeACAAfQBiAHSA5IBBTAuMi4xmAEAoAEBqgEHZ3dzLXdpesgBD8ABAQ&sclient=gws-wiz&ved=0ahUKEwiFi8HAy_vwAhW0IbcAHcyFCZcQ4dUDCA4&uact=5")
+        friday.runAndWait()
+    if user_command == "open ibomma":
+        friday.say(f"ok {user_name} opening ibomma")
+        webbrowser.open("https://ibomma.com")
+        friday.runAndWait()
+
+# These are apps opened by laptop
+    if user_command == "open local disc e":
+        friday.say(f"ok {user_name} opening local disc e")
+        dir = 'E:\\'
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+    if user_command == "play faded music":
+        friday.say(f"ok {user_name} playing faded music")
+        dir = 'C:\\Users\\HP\\Music\\Downloads\\Alan Walker - Faded.mp3'
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+    if user_command == "play songs":
+        friday.say(f"ok {user_name} playing songs")
+        dir = 'C:\\Users\\HP\\Music\\Downloads\\#AlaVaikunthapurramuloo - Ramuloo Ramulaa Full Song Allu Arjun Trivikram Thaman S #AA19.mp3'
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+    if user_command == "open local disc c":
+        friday.say(f"ok {user_name} opening local disc c")
+        dir = 'C:\\'
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+    if user_command == "open local disc d":
+        friday.say(f"ok {user_name} opening local disc d")
+        dir = 'D:\\'
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+    if user_command == "open brave":
+        friday.say(f"ok {user_name} opening brave")
+        dir = 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe'
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+    if user_command == "open chrome":
+        friday.say(f"ok {user_name} opening chrome")
+        dir = 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+    if user_command == "open anydesk":
+        friday.say(f"ok {user_name} opening any desk")
+        dir = "C:\\Program Files (x86)\\AnyDesk\\AnyDesk.exe"
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+    if user_command == "open file explorer":
+        friday.say(f"ok {user_name} opening file explorer")
+        dir = "C:\\Windows\\explorer.exe"
+        os.startfile(dir)
+        os.system(dir)
+        friday.runAndWait()
+
+    if user_command == "exit":
+        exit(0)
+
+    # if user_command == "hi":
+    #     friday.say("hi sir this is friday")
+    #     friday.runAndWait()
+    # if user_command == "hi":
+    #     friday.say("hi sir this is friday")
+    #     friday.runAndWait()
+    # if user_command == "hi":
+    #     friday.say("hi sir this is friday")
+    #     friday.runAndWait()
+    # if user_command == "hi":
+    #     friday.say("hi sir this is friday")
+    #     friday.runAndWait()
+    # if user_command == "hi":
+    #     friday.say("hi sir this is friday")
+    #     friday.runAndWait()
+    # if user_command == "hi":
+    #     friday.say("hi sir this is friday")
+    #     friday.runAndWait()
+    # if user_command == "hi":
+    #     friday.say("hi sir this is friday")
+    #     friday.runAndWait()
+    # if user_command == "hi":
+    #     friday.say("hi sir this is friday")
+    #     friday.runAndWait()
